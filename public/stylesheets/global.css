@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #141414;
+  margin-bottom: 500px;
+}
+
+h1, 
+h2, 
+h3, 
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.subtitulo {
+  font-size: 7rem;
+  line-height: 1;
+  text-transform: uppercase;
+  max-width: 4ch;
+  word-break: break-all;
+}
+
+@media (max-width: 1100px) {
+ .subtitulo{
+  font-size: 4rem;
+  text-transform: capitalize;
+  max-width: initial;
+ }
+}
