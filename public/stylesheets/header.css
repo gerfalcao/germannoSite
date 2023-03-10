@@ -21,13 +21,30 @@
   color: #9A4922;
 }
 
-a {
+.header a {
   size: 1.123rem;
   line-height: 1.3px;
   padding: 10px 20px;
   text-decoration: none;
   color: #141414;
   display: block;
+}
+
+.header a:hover {
+  background: #FFD974;
+  border-radius: 4px;
+
+  transition: 0.5s;
+}
+
+.logo a {
+  background: none;
+}
+
+.logo a:hover {
+  background: none;
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 @media (max-width: 800px){
@@ -37,7 +54,14 @@ a {
   }
 
   .header a {
+    margin-top: 20px;
     background: #f5f5f5;
     border-radius: 4px;
+  }
+
+  .header a:hover {
+    background: #FFD974;
+    border-radius: 4px;
+    transition: 0.5s;
   }
 }

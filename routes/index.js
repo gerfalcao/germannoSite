@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const controller = require('../controllers/indexController')
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Germanno Falcão' });
-});
+router.get('/', controller.home)
 
-router.get('/formacao', function(req, res) {
-  res.render('formacao');
-})
+router.get('/formacao', controller.formacao)
 
+router.get('/contato', controller.contato)
+
+router.post('/recebido', controller.recebido)
 
 module.exports = router;

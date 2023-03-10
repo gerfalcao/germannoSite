@@ -1,0 +1,15 @@
+.formacao {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.formacao img {
+  max-width: 100%;
+  border: 1px solid rgb 255, 255, 255, 0.2;
+  border-radius: 10px;
+  overflow: hidden;
+}
