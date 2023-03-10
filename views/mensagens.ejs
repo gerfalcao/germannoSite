@@ -5,14 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mensagens</title>
-  <link rel="stylesheet" href="/stylesheets;style.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
   <%- include('header') %>
 
   <main>
-  <%= mensagens %>
-
+   
+  <%  mensagens.forEach((mensagem) => { %>
+    <div class="mensagens">
+      <h2><% console.log(mensagem.nome) %></h2>
+      <p><% console.log(mensagem.email) %></p>
+      <p><% console.log(mensagem.mensagem) %></p>
+      <h1>Nome: <% mensagem.nome %></h1>
+      <p>O email é: <% mensagem.email %></p>
+      <p>A mensagem é: <% mensagem.mensagem %></p>
+    </div>
+ <% }) %>
+</div>
 </main>
   <%- include('footer') %>
 

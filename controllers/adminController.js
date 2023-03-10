@@ -1,18 +1,34 @@
 const db = require('../database/model/db');
 const Mensagens = require("../database/model/Mensagem");
 
+let login = 'admin';
+let password = 123456;
+
 const controller = {
   admin: (req, res) => {
-    res.send("Rotas que começam com admin");
-    console.log("Rotas que começam com admin");
+    res.render("admin");
+ },
+
+  // mensagens: (req, res) => {
+  //   Mensagens.findAll({order: [['id', 'DESC']]}).then((posts) => {
+  //       res.render("mensagens", {mensagens: posts});
+  //  })
+  // }
+
+  adminLog: (req,res) => {
+    if(req.body.password == password && req.body.login == login){
+      Mensagens.findAll({order: [['id', 'DESC']]}).then((posts) => {
+         res.render("mensagens", {mensagens: posts});
+    })
+    } else {
+    res.render('index')
+    }
   },
 
   mensagens: (req, res) => {
-    Mensagens.findAll().then(function(posts) {
-    res.render("mensagens", {mensagens: posts});
-    });
-   
-  },
-};
+    res.render('admin')
+  }
+
+}
 
 module.exports = controller

@@ -6,4 +6,6 @@ router.get('/', controller.admin)
 
 router.get('/mensagens', controller.mensagens)
 
+router.post('/mensagens', controller.adminLog)
+
 module.exports = router;
