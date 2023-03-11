@@ -8,8 +8,8 @@ router.get('/', controller.home)
 
 router.get('/formacao', controller.formacao)
 
-router.get('/contato', controller.contato)
+router.get('/contato', controller.getContato)
 
-router.post('/recebido', controller.recebido)
+router.post('/recebido', controller.postRecebido)
 
 module.exports = router;

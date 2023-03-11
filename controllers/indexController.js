@@ -7,10 +7,10 @@ const controller = {
   formacao: (req, res) => {
     res.render("formacao");
   },
-  contato: (req, res, next) => {
+  getContato: (req, res, next) => {
     res.render("form");
   },
-  recebido: (req, res) => {
+  postRecebido: (req, res) => {
     Mensagem.create({
       nome: req.body.nome,
       email: req.body.email,

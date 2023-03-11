@@ -14,12 +14,9 @@
    
   <%  mensagens.forEach((mensagem) => { %>
     <div class="mensagens">
-      <h2><% console.log(mensagem.nome) %></h2>
-      <p><% console.log(mensagem.email) %></p>
-      <p><% console.log(mensagem.mensagem) %></p>
-      <h1>Nome: <% mensagem.nome %></h1>
-      <p>O email é: <% mensagem.email %></p>
-      <p>A mensagem é: <% mensagem.mensagem %></p>
+      <h1>Nome: <%= mensagem.nome %></h1>
+      <p>O email é: <%= mensagem.email %></p>
+      <p>A mensagem é: <%= mensagem.mensagem %></p>
     </div>
  <% }) %>
 </div>
